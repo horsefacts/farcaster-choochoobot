@@ -8,4 +8,4 @@ const ACCOUNT_PRIVATE_KEY = (process.env.CHOOCHOOBOT_ACCOUNT_PRIVATE_KEY ??
 const cast = `All aboard!
 🚂🚃🚋🚃🚋🚃🚋🚃🚋💨`;
 
-await sendCast(FID, ACCOUNT_PRIVATE_KEY, cast);
+await sendCast(FID, ACCOUNT_PRIVATE_KEY, cast, "https://warpcast.com/~/channel/trains");
