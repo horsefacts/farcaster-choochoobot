@@ -8,7 +8,8 @@
     "start": "tsx index.ts",
     "typecheck": "bun tsc --noEmit",
     "generate-key": "bun tsx scripts/generateKey.ts",
-    "register-key": "bun tsx scripts/registerKey.ts"
+    "register-key": "bun tsx scripts/registerKey.ts",
+    "send-cast": "bun tsx scripts/sendCast.ts"
   },
   "devDependencies": {
     "bun-types": "latest",
