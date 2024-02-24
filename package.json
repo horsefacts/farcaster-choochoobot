@@ -6,7 +6,8 @@
   "version": "0.0.0",
   "scripts": {
     "start": "tsx index.ts",
-    "typecheck": "yarn tsc --noEmit"
+    "typecheck": "bun tsc --noEmit",
+    "generate-key": "bun tsx scripts/generateKey.ts"
   },
   "devDependencies": {
     "bun-types": "latest",
@@ -14,9 +15,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
     "@farcaster/hub-nodejs": "^0.11.3",
     "viem": "^2.7.13"
   }
