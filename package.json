@@ -7,7 +7,8 @@
   "scripts": {
     "start": "tsx index.ts",
     "typecheck": "bun tsc --noEmit",
-    "generate-key": "bun tsx scripts/generateKey.ts"
+    "generate-key": "bun tsx scripts/generateKey.ts",
+    "register-key": "bun tsx scripts/registerKey.ts"
   },
   "devDependencies": {
     "bun-types": "latest",
@@ -16,6 +17,6 @@
   },
   "dependencies": {
     "@farcaster/hub-nodejs": "^0.11.3",
-    "viem": "^2.7.13"
+    "viem": "^1.12.2"
   }
 }
