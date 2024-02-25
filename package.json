@@ -5,18 +5,18 @@
   "type": "module",
   "version": "0.0.0",
   "scripts": {
-    "start": "tsx index.ts",
+    "build": "bun build index.ts --outdir dist",
+    "start": "bun index.ts",
     "typecheck": "bun tsc --noEmit",
-    "generate-key": "bun tsx scripts/generateKey.ts",
-    "register-key": "bun tsx scripts/registerKey.ts",
-    "send-cast": "bun tsx scripts/sendCast.ts",
-    "make-train": "bun tsx scripts/makeTrain.ts",
-    "post-train": "bun tsx scripts/postTrain.ts"
+    "generate-key": "bun scripts/generateKey.ts",
+    "register-key": "bun scripts/registerKey.ts",
+    "send-cast": "bun scripts/sendCast.ts",
+    "make-train": "bun scripts/makeTrain.ts",
+    "post-train": "bun scripts/postTrain.ts"
   },
   "devDependencies": {
     "@types/xml2js": "^0.4.14",
     "bun-types": "latest",
-    "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {
