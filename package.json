@@ -9,15 +9,21 @@
     "typecheck": "bun tsc --noEmit",
     "generate-key": "bun tsx scripts/generateKey.ts",
     "register-key": "bun tsx scripts/registerKey.ts",
-    "send-cast": "bun tsx scripts/sendCast.ts"
+    "send-cast": "bun tsx scripts/sendCast.ts",
+    "make-train": "bun tsx scripts/makeTrain.ts",
+    "post-train": "bun tsx scripts/postTrain.ts"
   },
   "devDependencies": {
+    "@types/xml2js": "^0.4.14",
     "bun-types": "latest",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "@farcaster/hub-nodejs": "^0.11.3",
-    "viem": "^1.12.2"
+    "axios": "^1.6.7",
+    "moment-timezone": "^0.5.45",
+    "viem": "^1.12.2",
+    "xml2js": "^0.6.2"
   }
 }
