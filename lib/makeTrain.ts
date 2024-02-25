@@ -3,18 +3,24 @@ const ENGINE = "🚂";
 const CARS = ["🚃", "🚋"];
 const GUST = "💨";
 
+function getRandomElement<T>(array: T[]): T {
+    return array[getRandomInt(array.length)];
+}
+
+function getRandomInt(max: number): number {
+    return Math.floor(Math.random() * max);
+}
+
 function makeTrain() {
-  const cars = Array.from({ length: Math.floor(Math.random() * 6) + 1 }, () => {
-    return CARS[Math.floor(Math.random() * CARS.length)];
-  });
-  if (Math.random() < 0.33) {
-    cars.push(GUST);
-  }
-  const train = ENGINE + cars.join("");
-  const padded =
-    " ".repeat(Math.floor((Math.random() * (24 - train.length)) / 2)) + train;
-  const message = MESSAGES[Math.floor(Math.random() * MESSAGES.length)];
-  return `${message}\n${padded}`;
+    const length = getRandomInt(7);
+    const cars = Array.from({ length }, () => getRandomElement(CARS));
+    if (Math.random() < 0.33) {
+        cars.push(GUST);
+    }
+    const train = ENGINE + cars.join("");
+    const padding = " ".repeat(getRandomInt(24 - train.length) / 2);
+    const message = getRandomElement(MESSAGES);
+    return `${message}\n${padding}${train}`;
 }
 
 export default makeTrain;
